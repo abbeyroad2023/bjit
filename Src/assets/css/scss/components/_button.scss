@@ -1,0 +1,106 @@
+@charset "utf-8";
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+//
+//      @Document     : button
+//      @comment      : 버튼
+//
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+
+
+.btn-group {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	&.left {
+		@include justify-content(flex-start);
+	}
+	&.right {
+		@include justify-content(flex-end);
+	}
+	&.between {
+		@include justify-content(space-between);
+	}
+}
+
+.btn {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	padding: 0 rem(30);
+	border-radius: rem(8);
+	white-space: nowrap;
+	cursor: pointer;
+	transition: .4s;
+	// color
+	$btn-array:(
+		primary: $color-primary,
+		secondary: $color-secondary,
+		lightblue: #3f96d9,
+		Blumine: #205784,
+	);
+	@each $color-name, $color-value in $btn-array {
+		&-#{$color-name} {
+			color: #FFF;
+			border-width: 1px;
+			border-style: solid;
+			border-color: $color-value;
+			background-color: $color-value;
+			&-line {
+				color: #FFF;
+				border-width: 1px;
+				border-style: solid;
+				border-color: $color-value;
+				background-color: transparent;
+			}
+		}
+	}
+	// shape
+	&-md {
+		min-width: rem(200);
+		height: rem(56);
+		font-size: rem(24);
+		font-weight: 400;
+	}
+}
+
+
+
+/* ================================== media query ================================== */
+@include respond-to('xl') {
+
+} //1200px
+
+@include respond-to('lg') {
+
+} //992px
+
+@include respond-to('md') {
+	.btn_group {
+		@include flex-direction(column);
+		&.between {
+			@include flex-direction(row);
+			.btn {
+				min-width: auto;
+				margin-top: 0;
+				margin-left: rem(10);
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		.btn {
+			margin-left: 0;
+		}
+	}
+	.btn {
+		min-width: 100%;
+		margin-top: rem(10);
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+} //768px
+
+@include respond-to('sm') {
+
+} //576px

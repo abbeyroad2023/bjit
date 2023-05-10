@@ -1,0 +1,382 @@
+@charset "utf-8";
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+//
+//    * @Document   : mixins
+//    * @comment    : 믹스인 관련
+//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+
+//// break point
+@mixin respond-to($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media only screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+		+ "Available breakpoints are: #{map-keys($breakpoints)}.";
+	}
+}
+
+//// float clear
+@mixin clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+
+
+//// ellipsis
+// $line : 말줄임 표시 줄수,
+// $line-height : line-height px 값, line-height * 줄수 = max height
+// ---------> for IE 를 위한 맥스 높이값 부여
+@mixin ellipsis($line: false, $line-height: false) {
+	overflow: hidden;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+
+	@if $line != false {
+		display: block;
+		display: -webkit-box;
+		@if $line-height != false { // 유동적인 경우 사용
+			max-height: $line * $line-height;
+			line-height: $line-height;
+		}
+		-webkit-line-clamp: $line;
+
+		white-space: normal;
+		text-overflow: ellipsis;
+		-webkit-box-orient: vertical;
+		word-wrap:break-word;
+		overflow: hidden;
+	}
+}
+
+
+
+
+
+
+//////  rem 변환 (output 단위 : px, rem )
+//@mixin rem($property, $values) {
+//	$except: 0, auto, left, right, top, bottom, center, !important;
+//
+//	// @debug $base-font-size;
+//	$px: ();
+//	$rem: ();
+//	$per: ();
+//	@each $value in $values {
+//		@if index($except, $value) {
+//			$px: append($px, $value);
+//			$rem: append($rem, $value);
+//			$per: append($per, $value);
+//		} @else {
+//			$val: parseInt($value);
+//			$rootsize: parseInt($base-font-size);
+//			$px: append($px, $value);
+//			$rem: append($rem, str-slice( #{math.div($val, $rootsize)}, 1, 5 ) + rem);
+//			$per: append($per, str-slice( #{math.div($val, $rootsize)}, 1, 5 ));
+//		}
+//	}
+//	@if index('important', $values) {
+//		#{$property}: $px + ' !important';
+//		#{$property}: $rem + ' !important';
+//	} @else if index('line-height', $property) {
+//		#{$property}: $per;
+//	} @else {
+//		#{$property}: $px;
+//		#{$property}: $rem;
+//	}
+//}
+
+
+// blind
+// 시각적으로 숨기고, 스크린리더에서는 이용가능:
+// .focusable 클래스가 지정된 요소에 키보드로 포커스시 화면에 표시:
+// https://www.drupal.org/node/897638
+
+@mixin blind () {
+	position: absolute !important;
+	display: block;
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	border: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	&.focusable:active,
+	&.focusable:focus {
+		position: static;
+		height: auto;
+		width: auto;
+		margin: 0;
+		clip: auto;
+		overflow: visible;
+	}
+}
+
+@mixin sr-only {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	border: 0;
+	clip: rect(0,0,0,0);
+}
+
+@mixin sr-only-clear {
+	position: static;
+	overflow: auto;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	clip: auto;
+}
+
+// 가상선택자 before, after 처리
+@mixin vs-b {
+  display: block;
+  content: '';
+}
+@mixin vs-ib {
+  display: inline-block;
+  content: '';
+}
+// flex 정렬
+@mixin flex-ac {
+  display: flex;
+  align-items: center;
+}
+// position-center
+@mixin position-center { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// contents 스크롤
+@mixin headStickyScroll($sticky, $scroll) {
+  // sticky 영역 + 스크롤 컨텐츠 상위 wapper
+	height: 100%;
+
+  // sticky 영역 + 스크롤 컨텐츠 wapper
+  #{$sticky} {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  // 스크롤 영역
+  #{$scroll} {
+    overflow: auto;
+  }
+	
+}
+
+
+// image-replace
+//
+// image-replace시 오리지널 컨텐츠 숨김처리
+
+@mixin ir() {
+	overflow: hidden;
+	text-indent: -9999px;
+	font-size: 0.01em;
+	color: transparent;
+}
+
+@mixin image-replace() {
+	@include ir;
+}
+
+// size
+//
+// width / height 를 편하게....
+// width, height를 같게 하려면 @include size(100px);
+//                 다르게 하려면 @include size(100px, 1em);
+@mixin size($width, $height : $width) {
+	width: $width;
+	height: $height;
+}
+
+// easing
+// https://matthewlein.com/ceaser/
+
+$easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$speed : 0.2s !default;
+
+@mixin transition($prop, $sec:$speed, $ease:$easeInOutCubic) {
+	-webkit-transition: $prop $sec $ease;
+	-moz-transition: $prop $sec $ease;
+	-ms-transition: $prop $sec $ease;
+	-o-transition: $prop $sec $ease;
+	transition: $prop $sec $ease;
+}
+
+// 가상컨텐츠 생성에 필요한 속성
+@mixin content {
+	content: '';
+	@include vs-ib;
+}
+
+@mixin divider($height: false, $gap: false, $color: false){
+
+	@if $height != false {
+		$height : $height;
+	} @else {
+		$height: 12px;
+	}
+	@if $gap != false {
+		$gap : $gap;
+	} @else {
+		$gap: 12px;
+	}
+	@if $color != false {
+		$color : $color;
+	} @else {
+		$color: #eaeaea;
+	}
+
+	width: 1px;
+	height: $height;
+	background-color: $color;
+	margin-left: $gap;
+	margin-right: $gap;
+	
+}
+
+// 공통 컨텐츠 mixin
+@mixin largist-title {
+	@include rem(font-size, 32px);
+	@include rem(line-height, 48px);
+}
+@mixin larger-title {
+	@include rem(font-size, 28px);
+	@include rem(line-height, 42px);
+}
+@mixin large-title {
+	@include rem(font-size, 24px);
+	@include rem(line-height, 36px);
+}
+@mixin main-title {
+	@include rem(font-size, 18px);
+	@include rem(line-height, 27px);
+}
+@mixin page-title {
+	@include rem(font-size, 16px);
+	@include rem(line-height, 24px);
+}
+
+@mixin large-text {
+	@include rem(font-size, 15px);
+	@include rem(line-height, 26px);
+}
+@mixin main-text {
+	@include rem(font-size, 14px);
+	@include rem(line-height, 24px);
+}
+@mixin sub-main-text {
+	@include rem(font-size, 13px);
+	@include rem(line-height, 23px);
+}
+
+@mixin sub-text {
+	@include rem(font-size, 12px);
+	@include rem(line-height, 21px);
+}
+
+@mixin tiny-text {
+	@include rem(font-size, 11px);
+	@include rem(line-height, 19px);
+}
+
+
+// 재점검
+@mixin flex-left {
+	justify-content: flex-start !important
+}
+@mixin flex-right {
+	justify-content: flex-end !important
+}
+@mixin flex-center {
+	justify-content: center !important;
+}
+@mixin flex-space {
+	justify-content: space-between !important;
+}
+
+// box-shadow
+@mixin box-shadow ( $radius : $radius-8 ) { 
+	border-radius: $radius;	
+  border: solid 1px $set-color-2;
+  box-shadow: 0 3px 4px 0 $set-color-08;
+}
+
+// 페이지 section 구분 선 + 간격
+@mixin section-divider {
+	margin-top: 24px;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+
+
+
+// placeholder
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	@include optional-at-root('::placeholder') {
+		@content;
+	}
+	@include optional-at-root('::-webkit-input-placeholder') {
+		@content;
+	}
+	@include optional-at-root(':-moz-placeholder') {
+		@content;
+	}
+	@include optional-at-root('::-moz-placeholder') {
+		@content;
+	}
+	@include optional-at-root(':-ms-input-placeholder') {
+		@content;
+	}
+}
+
+// 스크롤바 커스텀
+@mixin scrollbarCustom($size) {
+	scrollbar-color: #2864A3 #01182E;
+	scrollbar-width: thin;
+	/* width */
+	&::-webkit-scrollbar {
+		width: rem($size);
+	}
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #01182E;
+		//border-radius: 100px;
+	}
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #2864A3;
+		border-radius: 100px;
+	}
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: #3F96D9;
+	}
+}

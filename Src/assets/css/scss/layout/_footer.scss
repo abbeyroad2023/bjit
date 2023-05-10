@@ -1,0 +1,111 @@
+@charset "utf-8";
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+//
+//      @Document     : footer
+//      @comment      : 푸터 영역
+//
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+
+#footer {
+	padding-top: rem(90);
+	background-color: #111;
+}
+
+.foot-link {
+	a {
+		display: block;
+		white-space: nowrap;
+	}
+	.foot-depth1 {
+		@include flexbox;
+		li {
+			@include flex;
+			max-width: rem(200);
+		}
+		a {
+			padding: rem(3) 0;
+			color: #FFF;
+			font-size: rem(20);
+		}
+	}
+	.foot-depth2 {
+		a {
+			padding: rem(7) 0;
+			color: #7A7A7A;
+			font-size: rem(16);
+		}
+	}
+}
+.foot-sns {
+	margin-top: rem(20);
+	@include flexbox;
+	@include justify-content(flex-end);
+	.sns-item {
+		& ~ .sns-item {
+			margin-left: rem(16);
+		}
+	}
+	.btn {
+		width: rem(60);
+		height: rem(60);
+		padding: 0;
+		border-radius: 50%;
+		&-twitter {
+			background-color: #3396d4;
+		}
+		&-discord {
+			background-color: #5865F2;
+		}
+	}
+}
+.copyright {
+	padding: rem(20) 0 rem(38);
+	text-align: right;
+	color: #7A7A7A;
+	em {
+		color: #FFF;
+	}
+}
+
+
+/* ================================== media query ================================== */
+@include respond-to('xl') {
+
+} //1200px
+
+@include respond-to('lg') {
+
+} //992px
+
+@include respond-to('md') {
+	#footer {
+		padding-top: rem(37);
+	}
+	.foot-link {
+		li {
+			max-width: none;
+			text-align: center;
+		}
+		.foot-depth1 {
+			@include align-items(center);
+			@include flex-direction(column);
+			& > li {
+				& ~ li {
+					margin-top: rem(24);
+				}
+			}
+		}
+	}
+	.foot-sns {
+		margin-top: rem(36);
+		@include justify-content(center);
+	}
+	.copyright {
+		padding: rem(42) 0;
+		text-align: center;
+	}
+} //768px
+
+@include respond-to('sm') {
+
+} //576px

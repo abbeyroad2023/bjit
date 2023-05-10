@@ -1,0 +1,105 @@
+@charset "utf-8";
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+//
+//      @Document     : typo
+//      @comment      : 글자 (제목, 본문 등)
+//
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+
+[class^='tit-'] {
+	em {
+		color: #2AA3FF;
+		font-weight: 700;
+	}
+}
+[class^='tit-'],
+.txt {
+	word-break: keep-all;
+	transition: .3s ease;
+	span {
+		display: inline-block;
+	}
+}
+.tit-lg {
+	margin-bottom: rem((18*1));
+	color: #FFF;
+	font-size: rem((90*1));
+	font-weight: 700;
+	line-height: 1.1;
+}
+.tit-md {
+	margin-bottom: rem((18*1));
+	color: #FFF;
+	font-size: rem((80*1));
+	font-weight: 700;
+	line-height: 1.1;
+}
+.tit-sm {
+	margin-bottom: rem((18*1));
+	color: #FFF;
+	font-size: rem((60*1));
+	font-weight: 700;
+	line-height: 1.1;
+}
+.txt {
+	padding: rem(10) 0;
+	color: #FFF;
+	font-size: rem((24*1));
+}
+.txt-stroke {
+	color: #011529;
+	text-shadow:
+		-1px -1px 0 #17548D,
+		1px -1px 0 #17548D,
+		-1px 1px 0 #17548D,
+		1px 1px 0 #17548D;
+}
+.txt-fill {
+	color: #0E91CC;
+}
+
+
+
+
+
+/* ================================== media query ================================== */
+@include respond-to('xl') {
+
+} //1200px
+
+@include respond-to('lg') {
+	.tit-lg {
+		margin-bottom: rem((18*0.8));
+		font-size: rem((90*0.8));
+	}
+	.tit-md {
+		margin-bottom: rem((18*0.8));
+		font-size: rem((80*0.8));
+	}
+	.tit-sm {
+		margin-bottom: rem((18*0.8));
+		font-size: rem((60*0.8));
+	}
+	.txt {
+		font-size: rem((24*0.8));
+	}
+} //992px
+
+@include respond-to('md') {
+	.tit-lg {
+		margin-bottom: rem((18*0.6));
+		font-size: rem((90*0.6));
+	}
+	.tit-md {
+		margin-bottom: rem((18*0.6));
+		font-size: rem((80*0.6));
+	}
+	.tit-sm {
+		margin-bottom: rem((18*0.6));
+		font-size: rem((60*0.6));
+	}
+} //768px
+
+@include respond-to('sm') {
+
+} //576px

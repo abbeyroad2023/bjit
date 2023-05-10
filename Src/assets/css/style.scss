@@ -1,0 +1,45 @@
+@charset "utf-8";
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+//
+//      @Document     : common
+//      @comment      : 사이트 전체 관련 CSS(공통요소)
+//
+// ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+
+// utils
+@import "scss/utils/variables";
+@import "scss/utils/mixins";
+@import "scss/utils/functions";
+@import "scss/utils/flexbox";
+
+// base
+@import "scss/base/fonts";
+@import "scss/base/reset";
+@import "scss/base/common";
+@import "scss/base/guide";
+
+// layout
+@import "scss/layout/layout";
+@import "scss/layout/grid";
+@import "scss/layout/header";
+@import "scss/layout/footer";
+
+// form
+@import "scss/form/form";
+@import "scss/form/input";
+@import "scss/form/check";
+@import "scss/form/select";
+@import "scss/form/textarea";
+
+// component
+@import "scss/components/typo";
+@import "scss/components/img";
+@import "scss/components/button";
+@import "scss/components/icon";
+
+// contents
+@import "scss/contents/main";
+@import "scss/contents/contents";
+
+// effect
+@import "scss/effect/animation";

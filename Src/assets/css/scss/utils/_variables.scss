@@ -1,0 +1,381 @@
+@charset "utf-8";
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+//
+//    * @Document   : variables
+//    * @comment    : 변수 관련
+//
+//▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+
+// break point
+$breakpoints: (
+    'xs':       ( max-width: 0 ),
+    'sm':       ( max-width: 576px ),
+    'md':       ( max-width: 768px ),
+    'lg':       ( max-width: 992px ),
+    'xl':       ( max-width: 1200px ),
+    'xxl':       ( max-width: 1700px ),
+) !default;
+
+
+// base font family
+$base-font-family: 'Roboto', sans-serif;
+
+// base font size
+$base-font-size: 16px;
+$base-font-size-mobile: 14px;
+
+// base color
+$base-color: #333;
+
+$color-primary: #2AA3FF;
+$color-secondary: #0E91CC;
+
+
+//$base-color: ();
+//
+//@function color($theme) {
+//  @return var(--#{$theme});
+//}
+
+//$base-color: #{meta.inspect(color(rgb-color))};
+
+// Alpha Color Set (Font, Line, Background ....)
+//$set-color-1: rgba($base-color, 0.1);
+//$set-color-2: rgba($base-color, 0.2);
+//$set-color-4: rgba($base-color, 0.4);
+//$set-color-6: rgba($base-color, 0.6);
+//$set-color-8: rgba($base-color, 0.8);
+//$set-color-9: rgba($base-color, 0.9);
+//$set-color-10: rgba($base-color, 1);
+//
+//$set-color-02: rgba($base-color, 0.02);
+//$set-color-04: rgba($base-color, 0.04);
+//$set-color-06: rgba($base-color, 0.06);
+//$set-color-08: rgba($base-color, 0.08);
+//$set-color-014: rgba($base-color, 0.14);
+//$set-color-028: rgba($base-color, 0.28);
+
+//$line-c100: #CCCCCC;
+$line-c200: #5a5a5a;
+//$line-c300: #DBDBDB;
+//$line-c400: #EAEAEA;
+$line-c500: #f7f7f7;
+$line-c600: #e8e8e8;
+
+//////////////////////////////
+// project config
+//////////////////////////////
+//// Base font
+//$body-font-family-kr: "Noto Sans KR";
+//$body-font-family-jp: "Noto Sans JP";
+//$body-font-family-sc: "Noto Sans SC";
+//
+//// font Weight
+//$fw700: 700;
+//$fw500: 500;
+//$fw400: 400;
+//
+//$base-font-size: 14px;
+//$line-height: 1.4;
+//$body-font-weight: $fw400;
+
+// 경로
+// 이미지 cw
+$img: "../../assets/images/";
+
+// 이미지 캐쉬
+// 1. true일 경우 background-image의 캐쉬가 랜덤으로 생성
+// 2. false일 경우 background-image의 캐쉬가 생성안됨
+// 3. 최종 빌드시 boolean값 변경
+$cashFlag: false;
+
+// 구형 익스플로러(ie8-) 브라우져 고려 여부
+// 1. clearfix 에서 *zoom:1 을 사용할지 여부
+// 2. font-size에서 rem단위 대체용 px 커버 여부
+// 3. filter: alpha() 사용
+$old-ie: false;
+
+// 배경 색상
+$bg100: #ffffff;
+$bg200: #f7f7f7;
+$bg300: #fafafa;
+$bg400: #cccccc;
+
+// icon color
+$icon-c000: #000000;
+$icon-c100: #111111;
+$icon-c200: #5a5a5a;
+$icon-c300: #767676;
+$icon-c400: #959595;
+$icon-c500: #a5a5a5;
+$icon-c600: #cccccc;
+
+// color point
+$cp100: #f45743;
+$cp200: #ff7e5f;
+$cp300: #fd5d22;
+$cp400: #4fce67;
+
+// normal-tint
+$normal-tint100: $bg100;
+
+// selected-tint
+$selected-tint100: rgba(64, 143, 242, 0.12);
+// selected-shade
+
+// active-tint
+$active-tint100: $bg100;
+// active-shade
+
+// lnb-button-primary
+$lnb-button-primary: #1f283c;
+$lnb-button-primary-hover: #121724;
+
+// primary-tint
+$primary-tint100: #2a82f0; //primary default //button primary
+$primary-tint200: #eaf3fd;
+$primary-tint300: #d4e6fc;
+$primary-tint400: #aacdf9;
+$primary-tint500: #7fb4f6;
+$primary-tint600: #559bf3;
+// primary-shade
+$primary-shade100: #2268c0; //button primary hover
+$primary-shade200: #1d5ba8;
+$primary-shade300: #194e90;
+$primary-shade400: #154077;
+$primary-shade500: #113460;
+$primary-shade600: #0c2747;
+$primary-shade700: #0b213c;
+$primary-shade800: #081a30;
+$primary-shade900: #040d17;
+
+//keyword
+$keyword: #ffeba8;
+
+// category color
+$category-important: #e96b6b; // 중요범주
+$category-c100: #fcc10f;
+$category-c200: #ff972f;
+$category-c300: #ff7232;
+$category-c400: #89bf33;
+$category-c500: #58cc3a;
+$category-c600: #1da958;
+$category-c700: #39c89a;
+$category-c800: #00aeb8;
+$category-c900: #27b7db;
+$category-c1000: #2ea1ff;
+$category-c1100: #2685dc;
+$category-c1200: #6291de;
+$category-c1300: #9f5ae8;
+$category-c1400: #7f5dd5;
+$category-c1500: #ea7d9e;
+$category-c1600: #cf4da3;
+$category-c1700: #ff7f7e;
+$category-c1800: #fa8b5f;
+$category-c1900: #d38d5b;
+$category-c2000: #909090;
+
+// schedule color
+$schedule-important: #e96b6b; // 중요범주
+$schedule-whtie: rgba(255, 255, 255, 0.8); // 색상 혼합할때...
+$schedule-c100: #ffc71b;
+$schedule-c200: #ff972f;
+$schedule-c300: #ff7232;
+$schedule-c400: #f55136;
+$schedule-c500: #e83d3d;
+$schedule-c600: #fe9b7c;
+$schedule-c700: #f584a6;
+$schedule-c800: #cf65a6;
+$schedule-c900: #9d5da0;
+$schedule-c1000: #745fa4;
+$schedule-c1100: #9b77c2;
+$schedule-c1200: #7592e2;
+$schedule-c1300: #2685dc;
+$schedule-c1400: #1099e4;
+$schedule-c1500: #25b3f7;
+$schedule-c1600: #3fc7e9;
+$schedule-c1700: #00aeb8;
+$schedule-c1800: #39c89a;
+$schedule-c1900: #1da958;
+$schedule-c2000: #60c246;
+$schedule-c2100: #98d24d;
+$schedule-c2200: #7aaf38;
+$schedule-c2300: #dec200;
+$schedule-c2400: #d19b22;
+$schedule-c2500: #a27453;
+$schedule-c2600: #896263;
+$schedule-c2700: #998675;
+$schedule-c2800: #b9af88;
+
+// memo
+$memo-c100: #fff7bf;
+$memo-c200: #d4faf1;
+$memo-c300: #e0ebff;
+$memo-c400: #e9ebf0;
+
+// state 상태표시
+$state-c100: #37d3a3;
+$state-c200: #afd337;
+$state-c300: #4aa719;
+$state-c400: #1bdb69;
+$state-c500: #f57a0c;
+$state-c600: #327bf4;
+$state-c700: #f4a242;
+$state-c800: #40b9db;
+$state-c900: #6b7b83;
+
+// 결재함 색상
+$bg-c100-light: #fcecd8;
+$bg-c200-light: #d8f0f7;
+$bg-c300-light: #dfe8f8;
+$bg-c400-light: #cbeef0;
+$bg-c500-light: #e8f3da;
+$bg-c600-light: #e5def6;
+
+// config-color
+$config-c100: #00923f;
+$config-c200: #00a13a;
+$config-c300: #4cb034;
+$config-c400: #85c226;
+$config-c500: #bbd800;
+$config-c600: #009261;
+$config-c700: #01a161;
+$config-c800: #48b15f;
+$config-c900: #81c45d;
+$config-c1000: #b9da55;
+$config-c1100: #009380;
+$config-c1200: #01a280;
+$config-c1300: #41b382;
+$config-c1400: #7ec380;
+$config-c1500: #b9dd7d;
+$config-c1600: #00959c;
+$config-c1700: #00a3a0;
+$config-c1800: #3fb3a0;
+$config-c1900: #7ac49f;
+$config-c2000: #b6dc9f;
+$config-c2100: #0094ba;
+$config-c2200: #00a4bf;
+$config-c2300: #3bb3c3;
+$config-c2400: #79c5c5;
+$config-c2500: #b6ddc8;
+
+$config-c2600: #da251c;
+$config-c2700: #e15517;
+$config-c2800: #e67817;
+$config-c2900: #ee9b11;
+$config-c3000: #f8c301;
+$config-c3100: #da2337;
+$config-c3200: #f45743;
+$config-c3300: #e77843;
+$config-c3400: #ef9a49;
+$config-c3500: #f6c449;
+$config-c3600: #dc214c;
+$config-c3700: #e15556;
+$config-c3800: #e7775f;
+$config-c3900: #ee9b69;
+$config-c4000: #f6c370;
+$config-c4100: #dc1e5c;
+$config-c4200: #e3556b;
+$config-c4300: #e87877;
+$config-c4400: #ef9a85;
+$config-c4500: #f6c491;
+$config-c4600: #dd196d;
+$config-c4700: #e5547f;
+$config-c4800: #e9778e;
+$config-c4900: #f09ba0;
+$config-c5000: #f6c5b4;
+
+$config-c5100: #281567;
+$config-c5200: #4c186a;
+$config-c5300: #691c6e;
+$config-c5400: #851c70;
+$config-c5500: #a41a70;
+$config-c5600: #0048bc;
+$config-c5700: #463a7c;
+$config-c5800: #673f7e;
+$config-c5900: #864481;
+$config-c6000: #a74a83;
+$config-c6100: #004b8c;
+$config-c6200: #3f528d;
+$config-c6300: #66598f;
+$config-c6400: #856093;
+$config-c6500: #a76895;
+$config-c6600: #015f9d;
+$config-c6700: #3269a1;
+$config-c6800: #5f71a3;
+$config-c6900: #837aa5;
+$config-c7000: #a884a8;
+$config-c7100: #0173b1;
+$config-c7200: #107fb6;
+$config-c7300: #5389b8;
+$config-c7400: #7c96bb;
+$config-c7500: #a9a3bf;
+
+$config-c7600: #000000;
+$config-c7700: #5f4d43;
+$config-c7800: #77594f;
+$config-c7900: #906b63;
+$config-c8000: #a77775;
+$config-c8100: #504d48;
+$config-c8200: #6a615a;
+$config-c8300: #83756a;
+$config-c8400: #9f867f;
+$config-c8500: #b3908a;
+$config-c8600: #5c5c5c;
+$config-c8700: #767771;
+$config-c8800: #8e8e86;
+$config-c8900: #aa9d94;
+$config-c9000: #beaaa1;
+$config-c9100: #6d7373;
+$config-c9200: #828c8d;
+$config-c9300: #9da3a1;
+$config-c9400: #b5b5ad;
+$config-c9500: #c9bfb6;
+$config-c9600: #7b8787;
+$config-c9700: #8c9c9c;
+$config-c9800: #a4b4b4;
+$config-c9900: #bcc5c0;
+$config-c10000: #d1cec5;
+
+// header font-size
+%header-font-size20 {
+  font-size: rem(20px);
+  font-weight: rem(30px);
+}
+%header-font-size24 {
+  font-size: rem(24px);
+  font-weight: rem(36px);
+}
+%header-font-size28 {
+  font-size: rem(28px);
+  font-weight: rem(42px);
+}
+%header-font-size32 {
+  font-size: rem(32px);
+  font-weight: rem(48px);
+}
+
+// content font-size(본문)
+%content-font-size14 {
+  font-size: rem(14px);
+  font-weight: rem(24px);
+}
+%content-font-size16 {
+  font-size: rem(16px);
+  font-weight: rem(28px);
+}
+
+// border-radius
+$radius-2: 2px;
+$radius-4: 4px;
+$radius-6: 6px;
+$radius-8: 8px;
+
+// icon size
+$xs: 12px;
+$sm: 16px;
+$md: 20px;
+$lg: 24px;
+// 예외
+$xl: 28px;
+$xxl: 36px;
