@@ -33,10 +33,10 @@
 	transition: .4s;
 	// color
 	$btn-array:(
-		primary: $color-primary,
-		secondary: $color-secondary,
-		lightblue: #3f96d9,
-		Blumine: #205784,
+		'primary': $color-primary,
+		'secondary': $color-secondary,
+		'lightblue': #3f96d9,
+		'Blumine': #205784,
 	);
 	@each $color-name, $color-value in $btn-array {
 		&-#{$color-name} {
@@ -61,8 +61,29 @@
 		font-size: rem(24);
 		font-weight: 400;
 	}
-}
 
+
+	// icon button
+	&-top {
+		position: fixed;
+		left: 50%;
+		bottom: rem(40);
+		width: rem(90);
+		height: rem(90);
+		padding: 0;
+		transform: translateX(rem((1440/2)+60));
+		opacity: 0;
+		transition: opacity .3s ease-out;
+		z-index: 9;
+		&.is-show {
+			opacity: 1;
+			&.is-absolute {
+				position: absolute;
+				bottom: rem(277+40);
+			}
+		}
+	}
+}
 
 
 /* ================================== media query ================================== */

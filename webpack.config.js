@@ -26,9 +26,8 @@ function generateHtmlPlugins(htmlDir) {
 	// folderList Array에 html내 폴더명 추가
 	const subList = [
 		'main',
-		'about',
-		'nft',
-		'token',
+		'company',
+		'service',
 		'contact',
 	];
 	for (i = 0; i < subList.length; i++) {
@@ -117,7 +116,7 @@ module.exports = (env) => {
 		entry: {
 			ui: [
 				'./assets/css/style.scss',
-				'./assets/js/script.js'
+				'./assets/js/script.js',
 			],
 		},
 		output: {

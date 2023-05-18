@@ -14,3 +14,8 @@
 @function rem($pxValue) {
 	@return #{stripUnit($pxValue) / stripUnit($base-font-size)}rem;
 }
+
+
+@function vw($pxValue, $viewportWidth) {
+	@return #{(stripUnit($pxValue) / $viewportWidth) * 100 }vw;
+}

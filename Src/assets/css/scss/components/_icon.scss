@@ -11,6 +11,19 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	&-link-arrow {
+		width: rem(47);
+		height: rem(20);
+		background-image: url('../images/icon/ic-link-arrow.svg');
+	}
+	&-top {
+		width: rem(90);
+		height: rem(90);
+		background-image: url('../images/icon/ic-top.svg');
+	}
+
+
+	
 	&-twitter {
 		width: rem(32);
 		height: rem(28);

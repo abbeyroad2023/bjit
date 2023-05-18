@@ -9,7 +9,13 @@
 .img-box {
 	position: relative;
 	width: 100%;
-	padding-bottom: 81.25%;
+	padding-bottom: 100%;
+	&.ratio2to1 {
+		padding-bottom: (680/1440) * 100%;
+	}
+	&.non-pd {
+		padding-bottom: 0;
+	}
 	img {
 		position: absolute;
 		width: 100%;

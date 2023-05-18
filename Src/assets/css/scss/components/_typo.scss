@@ -6,58 +6,101 @@
 //
 // ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
 
-[class^='tit-'] {
-	em {
-		color: #2AA3FF;
-		font-weight: 700;
-	}
-}
+
 [class^='tit-'],
 .txt {
 	word-break: keep-all;
 	transition: .3s ease;
 	span {
-		display: inline-block;
+		display: block;
 	}
 }
 .tit-lg {
-	margin-bottom: rem((18*1));
-	color: #FFF;
-	font-size: rem((90*1));
-	font-weight: 700;
-	line-height: 1.1;
+	margin-bottom: rem(24);
+	font-size: rem(72);
+	font-weight: 900;
+	line-height: (86/72);
 }
 .tit-md {
-	margin-bottom: rem((18*1));
-	color: #FFF;
-	font-size: rem((80*1));
-	font-weight: 700;
-	line-height: 1.1;
+	font-size: rem(60);
+	font-weight: 900;
+	line-height: (80/60);
 }
 .tit-sm {
-	margin-bottom: rem((18*1));
-	color: #FFF;
-	font-size: rem((60*1));
-	font-weight: 700;
-	line-height: 1.1;
+	font-size: rem(28);
+	font-weight: 800;
+	line-height: (26/28);
+	&.lh40 {
+		line-height: (40/28);
+	}
 }
 .txt {
-	padding: rem(10) 0;
-	color: #FFF;
-	font-size: rem((24*1));
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: (40/24);
 }
-.txt-stroke {
-	color: #011529;
-	text-shadow:
-		-1px -1px 0 #17548D,
-		1px -1px 0 #17548D,
-		-1px 1px 0 #17548D,
-		1px 1px 0 #17548D;
-}
-.txt-fill {
-	color: #0E91CC;
+.txt-sm {
+	color: #888;
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: (30/20);
 }
 
+.dt-txt {
+	color: #fff;
+	font-size: rem(48);
+	font-weight: 900;
+	line-height: (60/48);
+}
+.dd-txt {
+	color: #FFD3EC;
+	font-size: rem(24);
+	font-weight: 600;
+	line-height: (40/24);
+}
+.img-txt {
+	color: #fff;
+	font-size: rem(28);
+	font-weight: 900;
+	line-height: (26/28);
+	&.fc-black {
+		color:#222;
+	}
+}
+.slogan-txt {
+	color: #fff;
+	font-size: rem(52);
+	font-weight: 900;
+	line-height: (40/52);
+}
+
+.ul-list {
+	li {
+		@include flexbox;
+		@include align-items(flex-start);
+		font-size: rem(20);
+		font-weight: 500;
+		line-height: (40/20);
+	}
+	&.bul-dot li {
+		&:before {
+			content: '';
+			@include flex-basis(rem(4));
+			width: rem(4);
+			min-width: rem(4);
+			height: rem(4);
+			margin: rem(17) rem(12) 0 0;
+			border-radius: 50%;
+			background-color: #222;
+		}
+	}
+	&.fc-gray {
+		color: #888;
+		&.bul-dot li:before {
+			background-color: #888;
+		}
+	}
+}
 
 
 

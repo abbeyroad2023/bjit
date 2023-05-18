@@ -6,18 +6,123 @@
 	<title>BJIT</title>
 	<!-- resources -->
 	${require('html-loader?interpolate!../_template/common_resources.html')}
+
+	<style>
+		/* #scroll-btn {       
+			opacity: 0;   
+			width: 40px;
+			height: 40px;
+			color: #fff;
+			background-color: #ef476f;
+			position: fixed;
+			bottom: 10%;
+			right: 10%;    
+			border: 2px solid #fff;
+			border-radius: 50%; 
+			font: bold 20px monospace;       
+			transition: opacity 0.5s, transform 0.5s;
+		}
+		#scroll-btn.show {      
+			opacity: 1;  
+			transition: opacity 1s, transform 1s;     
+		} */
+	</style>
 </head>
 <body>
 <!-- wrap(s) -->
-<div class="wrap">
+<div id="wrap">
 	<!-- header(s) -->
 	${require('html-loader?interpolate!../_template/common_header.html')}
 	<!-- //header(e) -->
 	<!-- container(s) -->
 	<main id="container">
 		<section>
+			<div class="inner">
 
+				<div class="tit-box">
+					<p class="tit-lg">쉬운 데이터 통합 거버넌스</p>
+					<p class="txt">BJIT의 컨설팅을 통해 빅데이터, 보안, 운영 및 구축, 이전 그리고 UI/UX까지</p>
+				</div>
 
+				<ul class="list-group type2 list-main">
+					<li>
+						<a href="#none" class="list-item">
+							<div class="txt-item">
+								<dl>
+									<dt class="dt-txt">Big Data Platform</dt>
+									<dd class="dd-txt">손쉬운 데이터 추적, 분석, <br>관리 거버넌스 제공</dd>
+								</dl>
+								<p class="link-arrow"><i class="ic ic-link-arrow"></i></p>
+							</div>
+							<div class="img-item">
+								<p class="img-txt">Big Data Platform</p>
+								<p class="img-box"><img src="../../assets/images/main/main-service1.jpg" alt=""></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="list-item">
+							<div class="txt-item">
+								<dl>
+									<dt class="dt-txt">On-premise & <br>SaaS Service</dt>
+									<dd class="dd-txt">직접 인프라를 구축, 운영할 수 있도록 <br>솔루션 및 서비스 제공</dd>
+								</dl>
+								<p class="link-arrow"><i class="ic ic-link-arrow"></i></p>
+							</div>
+							<div class="img-item">
+								<p class="img-txt">On-premise & SaaS Service</p>
+								<p class="img-box" ><img src="../../assets/images/main/main-service2.jpg" alt=""></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="list-item">
+							<div class="txt-item">
+								<dl>
+									<dt class="dt-txt">Data Center <br>Maintenance <br>& Relocation</dt>
+									<dd class="dd-txt">데이터 이전에 필요한 분야별 서비스 제공</dd>
+								</dl>
+								<p class="link-arrow"><i class="ic ic-link-arrow"></i></p>
+							</div>
+							<div class="img-item">
+								<p class="img-txt">Data Center Maintenance & Relocation</p>
+								<p class="img-box"><img src="../../assets/images/main/main-service3.jpg" alt=""></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="list-item">
+							<div class="txt-item">
+								<dl>
+									<dt class="dt-txt">Security Platform</dt>
+									<dd class="dd-txt">연관관계 분석으로 보안 위협 탐지</dd>
+								</dl>
+								<p class="link-arrow"><i class="ic ic-link-arrow"></i></p>
+							</div>
+							<div class="img-item">
+								<p class="img-txt">Security Platforme</p>
+								<p class="img-box"><img src="../../assets/images/main/main-service4.jpg" alt=""></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none" class="list-item">
+							<div class="txt-item">
+								<dl>
+									<dt class="dt-txt">UX/UI Design</dt>
+									<dd class="dd-txt">비즈니스에 중요한 첫인상을 심어줄 <br>디자인 아이덴티티 제공</dd>
+								</dl>
+								<p class="link-arrow"><i class="ic ic-link-arrow"></i></p>
+							</div>
+							<div class="img-item">
+								<p class="img-txt fc-black">UX/UI Design</p>
+								<p class="img-box"><img src="../../assets/images/main/main-service5.jpg" alt=""></p>
+							</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
 
 
 
@@ -29,5 +134,7 @@
 	<!-- //footer(e) -->
 </div>
 <!-- wrap(e) -->
+
 </body>
 </html>
+
