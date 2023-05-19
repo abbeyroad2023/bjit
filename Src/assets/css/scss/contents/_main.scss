@@ -81,43 +81,7 @@
 
 /* ================================== media query ================================== */
 @include respond-to('xxl') {
-	.list-main {
-		.list-item {
-			&:hover {
-				.txt-item {
-					dt,
-					dd,
-					.link-arrow{
-						margin-left: vw(60, 1520);
-					}
-				}
-			}
-		}
-		.txt-item {
-			dl {
-				margin-top: vw(80, 1520);
-			}
-			dt {
-				font-size: vw(48, 1520);
-			}
-			dd {
-				margin-top: vw(26, 1520);
-				font-size: vw(24, 1520);
-			}
-			.link-arrow {
-				bottom: vw(60, 1520);
-				.ic-link-arrow {
-					width: vw(47, 1520);
-					height: vw(20, 1520);
-				}
-			}
-		}
-		.img-txt {
-			left: vw(60, 1520);
-			bottom: vw(60, 1520);
-			font-size: vw(28, 1520);
-		}
-	}
+	
 } //1520px
 
 @include respond-to('xl') {

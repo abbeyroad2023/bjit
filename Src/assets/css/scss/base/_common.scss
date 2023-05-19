@@ -229,6 +229,12 @@ button {
 
 
 /* ================================== media query ================================== */
+@include respond-to('xxl') {
+  html {
+    font-size: vw(16, 1520);
+  }
+} //1520px
+
 @include respond-to('xl') {
 
 } //1200px
@@ -238,13 +244,13 @@ button {
 } //992px
 
 @include respond-to('md') {
-  html {
-    font-size: 14px;
-  }
+  // html {
+  //   font-size: 14px;
+  // }
 } //768px
 
 @include respond-to('sm') {
-  html {
-    font-size: 12px;
-  }
+  // html {
+  //   font-size: 12px;
+  // }
 } //576px

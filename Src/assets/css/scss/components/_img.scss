@@ -8,15 +8,15 @@
 
 .img-box {
 	position: relative;
+	display: block;
 	width: 100%;
-	padding-bottom: 100%;
+	&.ratio100 {
+		padding-bottom: 100%;
+	}
 	&.ratio2to1 {
 		padding-bottom: (680/1440) * 100%;
 	}
-	&.non-pd {
-		padding-bottom: 0;
-	}
-	img {
+	&[class*='ratio'] img {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -24,6 +24,18 @@
 	}
 }
 
+.ef-img-hover {
+	.img-box {
+		overflow: hidden;
+		img {
+			transform: scale(1);
+			transition: transform 5s ease-out;
+		}
+	}
+	&:hover .img-box img {
+		transform: scale(1.2);
+	}
+}
 
 
 

@@ -22,6 +22,7 @@
 	line-height: (86/72);
 }
 .tit-md {
+	margin-bottom: rem(24);
 	font-size: rem(60);
 	font-weight: 900;
 	line-height: (80/60);
@@ -71,7 +72,7 @@
 	color: #fff;
 	font-size: rem(52);
 	font-weight: 900;
-	line-height: (40/52);
+	line-height: 1.15;
 }
 
 .ul-list {
@@ -106,41 +107,47 @@
 
 
 /* ================================== media query ================================== */
+
+@include respond-to('xxl') {
+
+} //1520px
+
+
 @include respond-to('xl') {
 
 } //1200px
 
 @include respond-to('lg') {
-	.tit-lg {
-		margin-bottom: rem((18*0.8));
-		font-size: rem((90*0.8));
-	}
-	.tit-md {
-		margin-bottom: rem((18*0.8));
-		font-size: rem((80*0.8));
-	}
-	.tit-sm {
-		margin-bottom: rem((18*0.8));
-		font-size: rem((60*0.8));
-	}
-	.txt {
-		font-size: rem((24*0.8));
-	}
+	// .tit-lg {
+	// 	margin-bottom: rem((18*0.8));
+	// 	font-size: rem((90*0.8));
+	// }
+	// .tit-md {
+	// 	margin-bottom: rem((18*0.8));
+	// 	font-size: rem((80*0.8));
+	// }
+	// .tit-sm {
+	// 	margin-bottom: rem((18*0.8));
+	// 	font-size: rem((60*0.8));
+	// }
+	// .txt {
+	// 	font-size: rem((24*0.8));
+	// }
 } //992px
 
 @include respond-to('md') {
-	.tit-lg {
-		margin-bottom: rem((18*0.6));
-		font-size: rem((90*0.6));
-	}
-	.tit-md {
-		margin-bottom: rem((18*0.6));
-		font-size: rem((80*0.6));
-	}
-	.tit-sm {
-		margin-bottom: rem((18*0.6));
-		font-size: rem((60*0.6));
-	}
+	// .tit-lg {
+	// 	margin-bottom: rem((18*0.6));
+	// 	font-size: rem((90*0.6));
+	// }
+	// .tit-md {
+	// 	margin-bottom: rem((18*0.6));
+	// 	font-size: rem((80*0.6));
+	// }
+	// .tit-sm {
+	// 	margin-bottom: rem((18*0.6));
+	// 	font-size: rem((60*0.6));
+	// }
 } //768px
 
 @include respond-to('sm') {
