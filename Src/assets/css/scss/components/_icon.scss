@@ -34,48 +34,27 @@
 		height: rem(34);
 		background-image: url('../images/icon/ic-discord.png');
 	}
-	&-gnb-open {
-		position: relative;
-		width: rem(40);
-		height: 2px;
-		background-color: #FFF;
-		&:before,
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			width: rem(40);
-			height: 2px;
-			background-color: #FFF;
-		}
-		&:before {
-			top: rem(-10);
-		}
-		&:after {
-			bottom: rem(-10);
-		}
-	}
-	&-gnb-close {
-		position: relative;
-		width: rem(40);
-		height: rem(40);
-		&:before,
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: rem(18);
-			width: rem(40);
-			height: 2px;
-			background-color: #FFF;
-		}
-		&:before {
-			transform: rotate(45deg);
-		}
-		&:after {
-			transform: rotate(-45deg);
-		}
-	}
+	// &-gnb-close {
+	// 	position: relative;
+	// 	width: rem(40);
+	// 	height: rem(40);
+	// 	&:before,
+	// 	&:after {
+	// 		content: '';
+	// 		position: absolute;
+	// 		left: 0;
+	// 		top: rem(18);
+	// 		width: rem(40);
+	// 		height: 2px;
+	// 		background-color: #FFF;
+	// 	}
+	// 	&:before {
+	// 		transform: rotate(45deg);
+	// 	}
+	// 	&:after {
+	// 		transform: rotate(-45deg);
+	// 	}
+	// }
 	&-scroll {
 		position: relative;
 		width: rem(32);

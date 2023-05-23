@@ -101,7 +101,6 @@
 }
 
 .ul-list {
-
 	&.col4 {
 		@include flexbox;
 		@include align-items(flex-start);

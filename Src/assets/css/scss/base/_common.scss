@@ -26,7 +26,7 @@ body {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
-  @include scrollbarCustom(10);
+  @include scrollbarCustom;
 }
 
 img {
@@ -230,27 +230,31 @@ button {
 
 /* ================================== media query ================================== */
 @include respond-to('xxl') {
-  html {
-    font-size: vw(16, 1520);
-  }
+  // html {
+  //   font-size: vw(16, 1520);
+  // }
 } //1520px
 
 @include respond-to('xl') {
-
+  html {
+    font-size: vw(16, 1200);
+  }
 } //1200px
 
 @include respond-to('lg') {
-
+  // html {
+  //   font-size: vw(16, 992);
+  // }
 } //992px
 
 @include respond-to('md') {
-  // html {
-  //   font-size: 14px;
-  // }
+  html {
+    font-size: vw(16, 375);
+  }
 } //768px
 
 @include respond-to('sm') {
   // html {
-  //   font-size: 12px;
+  //   font-size: vw(16, 567);
   // }
 } //576px

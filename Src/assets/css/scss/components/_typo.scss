@@ -136,18 +136,29 @@
 } //992px
 
 @include respond-to('md') {
-	// .tit-lg {
-	// 	margin-bottom: rem((18*0.6));
-	// 	font-size: rem((90*0.6));
-	// }
-	// .tit-md {
-	// 	margin-bottom: rem((18*0.6));
-	// 	font-size: rem((80*0.6));
-	// }
-	// .tit-sm {
-	// 	margin-bottom: rem((18*0.6));
-	// 	font-size: rem((60*0.6));
-	// }
+	.tit-lg {
+		margin-bottom: rem(14);
+		font-size: rem(36);
+		line-height: (48/36);
+	}
+	.txt {
+		font-size: rem(16);
+		line-height: (24/16);
+	}
+	.dt-txt {
+		font-size: rem(30);
+		line-height: (38/30);
+
+
+	}
+	.dd-txt {
+		font-size: rem(16);
+		line-height: (26/16);
+	}
+	.img-txt {
+		font-size: rem(18);
+		line-height: (24/18);
+	}
 } //768px
 
 @include respond-to('sm') {

@@ -324,6 +324,42 @@
 	}
 }
 
+.ef-init {
+	opacity: 0;
+	transition-timing-function: ease;
+	transition-duration: .4s;
+	transition-property: opacity, transform;
+	&.is-effect {
+		opacity: 1;
+	}
+}
+
+
+.ef-fade-up {
+	transform: translateY(rem(100));
+	&.is-effect {
+		transform: translateY(0);
+	}
+}
+.ef-fade-down {
+	transform: translateY(rem(-100));
+	&.is-effect {
+		transform: translateY(0);
+	}
+}
+.ef-fade-left {
+	transform: translateX(rem(100));
+	&.is-effect {
+		transform: translateY(0);
+	}
+}
+.ef-fade-right {
+	transform: translateX(rem(-100));
+	&.is-effect {
+		transform: translateY(0);
+	}
+}
+
 
 
 /* ================================== media query ================================== */

@@ -93,6 +93,36 @@
 } //992px
 
 @include respond-to('md') {
+	.list-main {
+		.list-item {
+			&:hover {
+				.txt-item {
+					dt,
+					dd,
+					.link-arrow{
+						margin-left: rem(30);
+					}
+				}
+			}
+		}
+		.txt-item {
+			dl {
+				margin-top: rem(40);
+			}
+			dt,
+			dd {
+				margin-top: rem(14);
+			}
+			.link-arrow {
+				bottom: rem(30);
+				transform: scale(.65);
+			}
+		}
+		.img-txt {
+			left: rem(30);
+			bottom: rem(30);
+		}
+	}
 
 } //768px
 

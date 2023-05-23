@@ -358,12 +358,12 @@ $speed : 0.2s !default;
 }
 
 // 스크롤바 커스텀
-@mixin scrollbarCustom($size) {
+@mixin scrollbarCustom($size: 10px) {
 	scrollbar-color: #E0E0E0 #F0F0F0;
 	scrollbar-width: thin;
 	/* width */
 	&::-webkit-scrollbar {
-		width: rem($size);
+		width: $size;
 	}
 	/* Track */
 	&::-webkit-scrollbar-track {
@@ -373,7 +373,7 @@ $speed : 0.2s !default;
 	/* Handle */
 	&::-webkit-scrollbar-thumb {
 		background: #E0E0E0;
-		border-radius: rem(2);
+		border-radius: 2px;
 	}
 	/* Handle on hover */
 	&::-webkit-scrollbar-thumb:hover {

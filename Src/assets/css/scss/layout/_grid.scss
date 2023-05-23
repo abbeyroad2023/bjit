@@ -9,7 +9,7 @@
 
 //list group
 .list-group {
-	overflow: hidden;
+	//overflow: hidden;
 	&.type1 > *:not(:first-child) {
 		margin-top: rem(80);
 	}
@@ -57,7 +57,21 @@
 } //992px
 
 @include respond-to('md') {
-
+	.list-group {
+		&.type1 > *:not(:first-child) {
+			//margin-top: rem(80);
+		}
+		&.type2 {
+			@include flexbox;
+			@include flex-wrap(wrap);
+			margin: rem(8) 0 0 rem(-32);
+			> * {
+				@include flex-basis(100%);
+				max-width: 100%;
+				padding: rem(32) 0 0 rem(32);
+			}
+		}
+	}
 } //768px
 
 @include respond-to('sm') {
