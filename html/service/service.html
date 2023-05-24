@@ -27,9 +27,40 @@
       <div class="inner">
         <h1 class="logo"><a href="../main/main.html"><span class="sr-only">BJIT</span></a></h1>
         <button type="button" class="btn gnb-control"><i class="ic ic-gnb-control"></i></button>
-        <div class="gnb-wrap">
-          <nav id="gnb">
-            <!-- <button type="button" class="btn gnb-close"><i class="ic-gnb-close"></i></button> -->
+        <!-- gnb(web)-->
+        <div class="web-gnb-wrap">
+          <nav id="web-gnb">
+            <ul class="gnb-depth1">
+              <li data-gnb="company"><a href="../company/company.html"><span>COMPANY</span></a></li>
+              <li data-gnb="service">
+                <a href="../service/service.html"><span>SERVICE</span></a>
+                <ul class="gnb-depth2">
+                  <li><a href="#none"><span>Big Data Platform</span></a></li>
+                  <li><a href="#none"><span>On-premise & SaaS Service</span></a></li>
+                  <li><a href="#none"><span>Data Center Relocation</span></a></li>
+                  <li><a href="#none"><span>Security Platform</span></a></li>
+                  <li><a href="#none"><span>UX/UI Design</span></a></li>
+                </ul>
+              </li>
+              <li data-gnb="contact"><a href="../contact/contact.html"><span>CONTACT</span></a></li>
+            </ul>
+          </nav>
+          <div class="web-lang">
+            <ul class="lang-choice">
+              <li class="is-current"><a href="../main/main.html">KOREA</a></li>
+              <li><a href="../main-en/main.html">ENGLISH</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- gnb(mobile)-->
+        <div class="mo-gnb-wrap">
+          <div class="mo-lang">
+            <ul class="lang-choice">
+              <li class="is-current"><a href="../main/main.html">KR</a></li>
+              <li><a href="../main-en/main.html">EN</a></li>
+            </ul>
+          </div>
+          <nav id="mo-gnb">
             <ul class="gnb-depth1">
               <li><a href="../company/company.html"><span>COMPANY</span></a></li>
               <li>
@@ -45,19 +76,12 @@
               <li><a href="../contact/contact.html"><span>CONTACT</span></a></li>
             </ul>
           </nav>
-          <div class="lang-box">
-            <button type="button" class="lang-current"><span>KOREA</span></button>
-            <ul class="lang-choice">
-              <li><a href="../main/main.html">KOREA</a></li>
-              <li><a href="../main-en/main.html">ENGLISH</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </header>
     <!-- //header(e) -->
     <!-- container(s) -->
-    <main id="container">
+    <main id="container" class="service">
 
       <!-- visual(s) -->
       <section class="visual service">
