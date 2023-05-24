@@ -109,7 +109,49 @@
 /* ================================== media query ================================== */
 
 @include respond-to('xxl') {
-
+	.tit-lg {
+		margin-bottom: vw(24, 1520);
+		font-size: vw(72, 1520);
+	}
+	.tit-md {
+		margin-bottom: vw(24, 1520);
+		font-size: vw(60, 1520);
+	}
+	.tit-sm {
+		font-size: vw(28, 1520);
+	}
+	.txt {
+		font-size: vw(24, 1520);
+	}
+	.txt-sm {
+		font-size: vw(20, 1520);
+	}
+	.dt-txt {
+		font-size: vw(48, 1520);
+	}
+	.dd-txt {
+		font-size: vw(24, 1520);
+	}
+	.img-txt {
+		font-size: vw(28, 1520);
+	}
+	.slogan-txt {
+		font-size: vw(52, 1520);
+	}
+	.ul-list {
+		li {
+			font-size: vw(20, 1520);
+		}
+		&.bul-dot li {
+			&:before {
+				@include flex-basis(vw(4, 1520));
+				width: vw(4, 1520);
+				min-width: vw(4, 1520);
+				height: vw(4, 1520);
+				margin: vw(17, 1520) vw(12, 1520) 0 0;
+			}
+		}
+	}
 } //1520px
 
 
@@ -118,24 +160,12 @@
 } //1200px
 
 @include respond-to('lg') {
-	// .tit-lg {
-	// 	margin-bottom: rem((18*0.8));
-	// 	font-size: rem((90*0.8));
-	// }
-	// .tit-md {
-	// 	margin-bottom: rem((18*0.8));
-	// 	font-size: rem((80*0.8));
-	// }
-	// .tit-sm {
-	// 	margin-bottom: rem((18*0.8));
-	// 	font-size: rem((60*0.8));
-	// }
-	// .txt {
-	// 	font-size: rem((24*0.8));
-	// }
-} //992px
-
-@include respond-to('md') {
+	[class^='tit-'],
+	.txt {
+		span {
+			display: inline-block;
+		}
+	}
 	.tit-lg {
 		margin-bottom: rem(14);
 		font-size: rem(36);
@@ -146,19 +176,21 @@
 		line-height: (24/16);
 	}
 	.dt-txt {
-		font-size: rem(30);
+		font-size: vw(30, 375);
 		line-height: (38/30);
-
-
 	}
 	.dd-txt {
-		font-size: rem(16);
+		font-size: vw(16, 375);
 		line-height: (26/16);
 	}
 	.img-txt {
-		font-size: rem(18);
+		font-size: vw(18, 375);
 		line-height: (24/18);
 	}
+} //992px
+
+@include respond-to('md') {
+
 } //768px
 
 @include respond-to('sm') {

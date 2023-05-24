@@ -90,12 +90,27 @@
 
 
 /* ================================== media query ================================== */
+
+@include respond-to('xxl') {
+	.ic {
+		&-link-arrow {
+			width: vw(47, 1520);
+			height: vw(20, 1520);
+		}
+	}
+} //1520px
+
 @include respond-to('xl') {
 
 } //1200px
 
 @include respond-to('lg') {
-
+	.ic {
+		&-link-arrow {
+			width: vw(31, 375);
+			height: vw(13, 375);
+		}
+	}
 } //992px
 
 @include respond-to('md') {

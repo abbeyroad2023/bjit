@@ -8,7 +8,11 @@
     "start": "webpack-dev-server --env.NODE_ENV=development",
     "build": "webpack --env.NODE_ENV=production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "s": "webpack-dev-server --env.NODE_ENV=development",
+    "b": "webpack --env.NODE_ENV=production",
+    "p": "npm run build",
+    "d": "gh-pages -d dist"
   },
   "homepage": "https://abbeyroad2023.github.io/bjit/",
   "author": "Liam",

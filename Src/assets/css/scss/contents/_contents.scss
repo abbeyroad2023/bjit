@@ -10,7 +10,7 @@
 .row-cont {
 	.tit-box {
 		position: fixed;
-		top: rem(80+90);
+		top: rem(80 + 90);
 		width: 40%;
 		z-index: 1;
 	}
@@ -124,11 +124,60 @@
 
 
 /* ================================== media query ================================== */
+
+
+@include respond-to('xxl') {
+	.list-company {
+		.con-box {
+			[class^='tit-'] {
+				margin-top: vw(40, 1520);
+			}
+		}
+		.ul-list li {
+			padding-right: vw(80, 1520);
+		}
+	}
+} //1520px
+
 @include respond-to('xl') {
 
 } //1200px
 
 @include respond-to('lg') {
+
+	.row-cont {
+		.tit-box {
+			position: relative;
+			top: auto;
+			width: 100%;
+		}
+	}
+	
+	.list-company {
+		width: 100%;
+		.list-item {
+			// @include flexbox;
+			@include align-items(flex-start);
+			@include flex-direction(column);
+		}
+		.con-box {
+			@include flex-basis(100%);
+			max-width: 100%;
+			min-width: 100%;
+			[class^='tit-'] {
+				margin-top: rem(40);
+			}
+		}
+		.ul-list li {
+			@include justify-content(flex-start);
+			padding-right: rem(80);
+			white-space: nowrap;
+		}
+	}
+
+
+
+
 
 } //992px
 

@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		gnbControl.addEventListener('click', () => {
 
-			if (gnbControl.classList.contains('is-open')) {
-				header.classList.remove('mo-gnb-open');
-				gnbControl.classList.remove('is-open');
-				html.removeAttribute('style');
-			} else {
+			if (!gnbControl.classList.contains('is-open')) {
 				header.classList.add('mo-gnb-open');
 				gnbControl.classList.add('is-open');
 				html.style.overflowY = 'hidden';
+			} else {
+				header.classList.remove('mo-gnb-open');
+				gnbControl.classList.remove('is-open');
+				html.removeAttribute('style');
 			}
 
 			// header.classList.add('mo-gnb-open')

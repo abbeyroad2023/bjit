@@ -7,15 +7,14 @@
 //▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
 
 
-//// PX to REM 함수
 @function stripUnit($value) {
 	@return $value / ($value * 0 + 1);
 }
+//// PX to REM 함수
 @function rem($pxValue) {
 	@return #{stripUnit($pxValue) / stripUnit($base-font-size)}rem;
 }
-
-
-@function vw($pxValue, $viewportWidth) {
-	@return #{(stripUnit($pxValue) / $viewportWidth) * 100 }vw;
+//// PX to VW 함수
+@function vw($pxValue, $viewportWidth: 1920) {
+	@return #{stripUnit($pxValue) * 100 / stripUnit($viewportWidth)}vw;
 }

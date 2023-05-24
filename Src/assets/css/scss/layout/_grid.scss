@@ -48,15 +48,26 @@
 
 
 /* ================================== media query ================================== */
+@include respond-to('xxl') {
+	.list-group {
+		&.type1 > *:not(:first-child) {
+			margin-top: vw(80, 1520);
+		}
+		&.type2 {
+			margin: vw(10, 1520) 0 0 vw(-40, 1520);
+			> * {
+				padding: vw(40, 1520) 0 0 vw(40, 1520);
+			}
+		}
+	}
+} //1520px
+
 @include respond-to('xl') {
 
 } //1200px
 
 @include respond-to('lg') {
-
-} //992px
-
-@include respond-to('md') {
+	
 	.list-group {
 		&.type1 > *:not(:first-child) {
 			//margin-top: rem(80);
@@ -72,6 +83,30 @@
 			}
 		}
 	}
+	.col-half {
+		@include flex-wrap(wrap);
+		& > * {
+			@include flex-basis(100%);
+		}
+	
+	}
+	
+	.col-one-fourth {
+		@include flex-wrap(wrap);
+		& > *:first-child {
+			@include flex-basis(100%);
+		}
+		& > *:last-child {
+			@include flex-basis(100%);
+		}
+	}
+
+
+
+} //992px
+
+@include respond-to('md') {
+
 } //768px
 
 @include respond-to('sm') {

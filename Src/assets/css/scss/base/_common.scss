@@ -236,9 +236,9 @@ button {
 } //1520px
 
 @include respond-to('xl') {
-  html {
-    font-size: vw(16, 1200);
-  }
+  // html {
+  //   font-size: vw(16, 1200);
+  // }
 } //1200px
 
 @include respond-to('lg') {
@@ -248,9 +248,9 @@ button {
 } //992px
 
 @include respond-to('md') {
-  html {
-    font-size: vw(16, 375);
-  }
+  // html {
+  //   font-size: vw(16, 375);
+  // }
 } //768px
 
 @include respond-to('sm') {
