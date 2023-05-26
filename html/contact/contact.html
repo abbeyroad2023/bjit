@@ -31,18 +31,18 @@
         <div class="web-gnb-wrap">
           <nav id="web-gnb">
             <ul class="gnb-depth1">
-              <li data-gnb="company"><a href="../company/company.html"><span>COMPANY</span></a></li>
-              <li data-gnb="service">
+              <li id="company"><a href="../company/company.html"><span>COMPANY</span></a></li>
+              <li id="service">
                 <a href="../service/service.html"><span>SERVICE</span></a>
                 <ul class="gnb-depth2">
-                  <li><a href="#none"><span>Big Data Platform</span></a></li>
-                  <li><a href="#none"><span>On-premise & SaaS Service</span></a></li>
-                  <li><a href="#none"><span>Data Center Relocation</span></a></li>
-                  <li><a href="#none"><span>Security Platform</span></a></li>
-                  <li><a href="#none"><span>UX/UI Design</span></a></li>
+                  <li><a href="../service/service.html#service1" data-ancher="service1"><span>Big Data Platform</span></a></li>
+                  <li><a href="../service/service.html#service2" data-ancher="service2"><span>On-premise & SaaS Service</span></a></li>
+                  <li><a href="../service/service.html#service3" data-ancher="service3"><span>Data Center Relocation</span></a></li>
+                  <li><a href="../service/service.html#service4" data-ancher="service4"><span>Security Platform</span></a></li>
+                  <li><a href="../service/service.html#service5" data-ancher="service5"><span>UX/UI Design</span></a></li>
                 </ul>
               </li>
-              <li data-gnb="contact"><a href="../contact/contact.html"><span>CONTACT</span></a></li>
+              <li id="contact"><a href="../contact/contact.html"><span>CONTACT</span></a></li>
             </ul>
           </nav>
           <div class="web-lang">
@@ -66,11 +66,11 @@
               <li>
                 <a href="../service/service.html"><span>SERVICE</span></a>
                 <ul class="gnb-depth2">
-                  <li><a href="#none"><span>Big Data Platform</span></a></li>
-                  <li><a href="#none"><span>On-premise & SaaS Service</span></a></li>
-                  <li><a href="#none"><span>Data Center Relocation</span></a></li>
-                  <li><a href="#none"><span>Security Platform</span></a></li>
-                  <li><a href="#none"><span>UX/UI Design</span></a></li>
+                  <li><a href="../service/service.html#service1" data-ancher="service1"><span>Big Data Platform</span></a></li>
+                  <li><a href="../service/service.html#service2" data-ancher="service2"><span>On-premise & SaaS Service</span></a></li>
+                  <li><a href="../service/service.html#service3" data-ancher="service3"><span>Data Center Relocation</span></a></li>
+                  <li><a href="../service/service.html#service4" data-ancher="service4"><span>Security Platform</span></a></li>
+                  <li><a href="../service/service.html#service5" data-ancher="service5"><span>UX/UI Design</span></a></li>
                 </ul>
               </li>
               <li><a href="../contact/contact.html"><span>CONTACT</span></a></li>
@@ -81,8 +81,8 @@
     </header>
     <!-- //header(e) -->
     <!-- container(s) -->
-    <main id="container" class="contact">
-      <section>
+    <main id="container" data-gnb="contact">
+      <section class="content">
         <div class="inner">
 
           <div class="tit-box">
@@ -90,11 +90,98 @@
             <p class="txt">무엇이든 물어보세요! <br>고객님의 고민이 무엇인지 보내주시면, 최대한 신속히 확인하여 상담을 진행해드리겠습니다.</p>
           </div>
 
+          <!-- .field-item -->
+          <div class="field-item">
+            <label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+            <!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+            <div class="control">
+              <div class="input-item">
+                <input type="text" id="" class="input" placeholder="입력하세요" value="">
+                <button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+              </div>
+              <p class="error-msg">입력 내용을 확인해 주세요.</p>
+            </div>
+          </div>
+          <!-- //.field-item -->
+
+          <!-- .field-item -->
+          <div class="field-item">
+            <label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+            <!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+            <div class="control">
+              <div class="input-item">
+                <input type="text" id="" class="input" placeholder="입력하세요" value="">
+                <button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+              </div>
+              <p class="error-msg">입력 내용을 확인해 주세요.</p>
+            </div>
+          </div>
+          <!-- //.field-item -->
+
+
+          <!-- .field-item -->
+          <div class="field-item">
+            <label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+            <!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+            <div class="control">
+              <div class="input-item">
+                <input type="text" id="" class="input" placeholder="입력하세요" value="">
+                <button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+              </div>
+              <p class="error-msg">입력 내용을 확인해 주세요.</p>
+            </div>
+          </div>
+          <!-- //.field-item -->
+
+
+          <!-- .field-item -->
+          <div class="field-item">
+            <label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+            <!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+            <div class="control is-success">
+              <div class="input-item">
+                <input type="text" id="" class="input" placeholder="입력하세요" value="">
+                <button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+              </div>
+              <p class="error-msg">입력 내용을 확인해 주세요.</p>
+            </div>
+          </div>
+          <!-- //.field-item -->
+
+          <!-- .field-item -->
+          <div class="field-item">
+            <label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+            <!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+            <div class="control is-error">
+              <div class="input-item">
+                <input type="text" id="" class="input" placeholder="입력하세요" value="">
+                <button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+              </div>
+              <p class="error-msg">입력 내용을 확인해 주세요.</p>
+            </div>
+          </div>
+          <!-- //.field-item -->
+
+          <!-- .field-item -->
+          <div class="field-item">
+            <label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+            <!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+            <div class="control">
+              <div class="input-item">
+                <textarea id="" class="input" placeholder="입력하세요" value=""></textarea>
+                <button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+              </div>
+              <p class="error-msg">입력 내용을 확인해 주세요.</p>
+            </div>
+          </div>
+          <!-- //.field-item -->
+
         </div>
 
-
-
       </section>
+
+      <button type="button" id="topBtn" class="btn btn-top is-show"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
+
     </main>
     <!-- //container(e) -->
     <!-- footer(s) -->
@@ -115,9 +202,6 @@
         </div>
       </div>
     </footer>
-
-    <button type="button" id="topBtn" class="btn btn-top"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
-
     <!-- //footer(e) -->
   </div>
   <!-- wrap(e) -->

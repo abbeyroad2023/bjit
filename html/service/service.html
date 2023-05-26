@@ -31,18 +31,18 @@
         <div class="web-gnb-wrap">
           <nav id="web-gnb">
             <ul class="gnb-depth1">
-              <li data-gnb="company"><a href="../company/company.html"><span>COMPANY</span></a></li>
-              <li data-gnb="service">
+              <li id="company"><a href="../company/company.html"><span>COMPANY</span></a></li>
+              <li id="service">
                 <a href="../service/service.html"><span>SERVICE</span></a>
                 <ul class="gnb-depth2">
-                  <li><a href="#none"><span>Big Data Platform</span></a></li>
-                  <li><a href="#none"><span>On-premise & SaaS Service</span></a></li>
-                  <li><a href="#none"><span>Data Center Relocation</span></a></li>
-                  <li><a href="#none"><span>Security Platform</span></a></li>
-                  <li><a href="#none"><span>UX/UI Design</span></a></li>
+                  <li><a href="../service/service.html#service1" data-ancher="service1"><span>Big Data Platform</span></a></li>
+                  <li><a href="../service/service.html#service2" data-ancher="service2"><span>On-premise & SaaS Service</span></a></li>
+                  <li><a href="../service/service.html#service3" data-ancher="service3"><span>Data Center Relocation</span></a></li>
+                  <li><a href="../service/service.html#service4" data-ancher="service4"><span>Security Platform</span></a></li>
+                  <li><a href="../service/service.html#service5" data-ancher="service5"><span>UX/UI Design</span></a></li>
                 </ul>
               </li>
-              <li data-gnb="contact"><a href="../contact/contact.html"><span>CONTACT</span></a></li>
+              <li id="contact"><a href="../contact/contact.html"><span>CONTACT</span></a></li>
             </ul>
           </nav>
           <div class="web-lang">
@@ -66,11 +66,11 @@
               <li>
                 <a href="../service/service.html"><span>SERVICE</span></a>
                 <ul class="gnb-depth2">
-                  <li><a href="#none"><span>Big Data Platform</span></a></li>
-                  <li><a href="#none"><span>On-premise & SaaS Service</span></a></li>
-                  <li><a href="#none"><span>Data Center Relocation</span></a></li>
-                  <li><a href="#none"><span>Security Platform</span></a></li>
-                  <li><a href="#none"><span>UX/UI Design</span></a></li>
+                  <li><a href="../service/service.html#service1" data-ancher="service1"><span>Big Data Platform</span></a></li>
+                  <li><a href="../service/service.html#service2" data-ancher="service2"><span>On-premise & SaaS Service</span></a></li>
+                  <li><a href="../service/service.html#service3" data-ancher="service3"><span>Data Center Relocation</span></a></li>
+                  <li><a href="../service/service.html#service4" data-ancher="service4"><span>Security Platform</span></a></li>
+                  <li><a href="../service/service.html#service5" data-ancher="service5"><span>UX/UI Design</span></a></li>
                 </ul>
               </li>
               <li><a href="../contact/contact.html"><span>CONTACT</span></a></li>
@@ -81,7 +81,7 @@
     </header>
     <!-- //header(e) -->
     <!-- container(s) -->
-    <main id="container" class="service">
+    <main id="container" data-gnb="service">
 
       <!-- visual(s) -->
       <section class="visual service">
@@ -101,7 +101,7 @@
       <!-- //visual(e) -->
 
       <!-- content(s) -->
-      <section class="content">
+      <section class="content" id="service1">
         <div class="inner">
 
           <div class="tit-box col-half ef-init ef-fade-up">
@@ -135,7 +135,7 @@
       <!-- //content(e) -->
 
       <!-- content(s) -->
-      <section class="content top-line">
+      <section class="content top-line" id="service2">
         <div class="inner">
 
           <div class="tit-box ef-init ef-fade-up">
@@ -204,7 +204,7 @@
       <!-- //content(e) -->
 
       <!-- content(s) -->
-      <section class="content bg-light">
+      <section class="content bg-light" id="service3">
         <div class="inner">
 
           <div class="tit-box ef-init ef-fade-up">
@@ -226,7 +226,7 @@
       <!-- //content(e) -->
 
       <!-- content(s) -->
-      <section class="content">
+      <section class="content" id="service4">
         <div class="inner">
 
           <div class="tit-box col-half ef-init ef-fade-up">
@@ -245,7 +245,7 @@
       </section>
       <!-- //content(e) -->
       <!-- content(s) -->
-      <section class="content top-line">
+      <section class="content top-line" id="service5">
         <div class="inner">
 
           <div class="tit-box col-half ef-init ef-fade-up">
@@ -260,6 +260,8 @@
         </div>
       </section>
       <!-- //content(e) -->
+
+      <button type="button" id="topBtn" class="btn btn-top is-show"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
 
     </main>
     <!-- //container(e) -->
@@ -281,9 +283,6 @@
         </div>
       </div>
     </footer>
-
-    <button type="button" id="topBtn" class="btn btn-top"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
-
     <!-- //footer(e) -->
   </div>
   <!-- wrap(e) -->
