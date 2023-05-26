@@ -14,8 +14,8 @@
 	${require('html-loader?interpolate!../_template/common_header.html')}
 	<!-- //header(e) -->
 	<!-- container(s) -->
-	<main id="container" class="contact">
-		<section>
+	<main id="container" data-gnb="contact">
+		<section class="content">
 			<div class="inner">
 
 				<div class="tit-box">
@@ -23,11 +23,98 @@
 					<p class="txt">무엇이든 물어보세요! <br>고객님의 고민이 무엇인지 보내주시면, 최대한 신속히 확인하여 상담을 진행해드리겠습니다.</p>
 				</div>
 
+				<!-- .field-item -->
+				<div class="field-item">
+					<label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+					<!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+					<div class="control">
+						<div class="input-item">
+							<input type="text" id="" class="input" placeholder="입력하세요" value="">
+							<button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+						</div>
+						<p class="error-msg">입력 내용을 확인해 주세요.</p>
+					</div>
+				</div>
+				<!-- //.field-item -->
+
+				<!-- .field-item -->
+				<div class="field-item">
+					<label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+					<!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+					<div class="control">
+						<div class="input-item">
+							<input type="text" id="" class="input" placeholder="입력하세요" value="">
+							<button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+						</div>
+						<p class="error-msg">입력 내용을 확인해 주세요.</p>
+					</div>
+				</div>
+				<!-- //.field-item -->
+
+						
+				<!-- .field-item -->
+				<div class="field-item">
+					<label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+					<!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+					<div class="control">
+						<div class="input-item">
+							<input type="text" id="" class="input" placeholder="입력하세요" value="">
+							<button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+						</div>
+						<p class="error-msg">입력 내용을 확인해 주세요.</p>
+					</div>
+				</div>
+				<!-- //.field-item -->
+
+						
+				<!-- .field-item -->
+				<div class="field-item">
+					<label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+					<!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+					<div class="control is-success">
+						<div class="input-item">
+							<input type="text" id="" class="input" placeholder="입력하세요" value="">
+							<button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+						</div>
+						<p class="error-msg">입력 내용을 확인해 주세요.</p>
+					</div>
+				</div>
+				<!-- //.field-item -->
+						
+				<!-- .field-item -->
+				<div class="field-item">
+					<label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+					<!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+					<div class="control is-error">
+						<div class="input-item">
+							<input type="text" id="" class="input" placeholder="입력하세요" value="">
+							<button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+						</div>
+						<p class="error-msg">입력 내용을 확인해 주세요.</p>
+					</div>
+				</div>
+				<!-- //.field-item -->
+						
+				<!-- .field-item -->
+				<div class="field-item">
+					<label for="" class="label">레이블<i class="necessary"><span class="sr-only">필수</span></i></label>
+					<!-- [.control] 입력 오류/ 미입력: .is-error, 입력 유효: .is-success -->
+					<div class="control">
+						<div class="input-item">
+							<textarea id="" class="input" placeholder="입력하세요" value=""></textarea>
+							<button type="button" class="btn btn-reset"><i class="ic ic-reset"></i><span class="sr-only">입력 초기화</span></button>
+						</div>
+						<p class="error-msg">입력 내용을 확인해 주세요.</p>
+					</div>
+				</div>
+				<!-- //.field-item -->
+
 			</div>
 
-
-
 		</section>
+
+		<button type="button" id="topBtn" class="btn btn-top is-show"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
+
 	</main>
 	<!-- //container(e) -->
 	<!-- footer(s) -->

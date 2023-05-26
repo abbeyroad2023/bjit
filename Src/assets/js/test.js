@@ -92,3 +92,51 @@ $(document).ready(function () {
 		  this.effectScroller();
 	  }
   }
+
+
+
+
+
+
+
+  // test1
+
+
+jQuery(document).ready(function () {
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if (window.location.hash && isChrome) {
+        setTimeout(function () {
+            var hash = window.location.hash;
+            window.location.hash = "";
+            window.location.hash = hash;
+        }, 300);
+    }
+});
+
+
+
+
+// test2
+
+// 페이지 이동 후 앵커 스크롤 이동
+function scrollToAnchor(anchorId) {
+	const element = document.getElementById(anchorId);
+  
+	if (element) {
+	  element.scrollIntoView({
+		behavior: 'smooth', // 부드러운 스크롤을 원한다면 'smooth'로 변경
+		block: 'start' // 앵커를 화면 상단에 정렬하려면 'start'로 변경
+	  });
+	}
+  }
+  
+  // 페이지 로드 시 URL의 앵커로 자동 스크롤 이동
+  window.addEventListener('DOMContentLoaded', () => {
+	const url = window.location.href;
+	const anchorIndex = url.indexOf('#');
+  
+	if (anchorIndex !== -1) {
+	  const anchorId = url.substring(anchorIndex + 1);
+	  scrollToAnchor(anchorId);
+	}
+  });

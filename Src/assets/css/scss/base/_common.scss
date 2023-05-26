@@ -9,11 +9,12 @@
 /* html, body 설정 */
 html,
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 html {
   font-size: $base-font-size;
   line-height: 1;
+  // scroll-behavior: smooth;
 }
 body {
   color: $base-color;

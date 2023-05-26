@@ -66,8 +66,8 @@
 		padding-top: rem(120);
 		padding-bottom: rem(120);
 	}
-	&:last-child .inner {
-		padding-bottom: 0;
+	&:first-child .inner {
+		padding-top: 0;
 	}
 	&.top-line {
 		.inner {
@@ -137,6 +137,29 @@
 			padding-right: vw(80, 1520);
 		}
 	}
+
+	.visual {
+		&.service {
+			.img-item {
+				.slogan-txt {
+					span {
+						padding: vw(15, 1520) 0; 
+					}
+				}
+			}
+		}
+	}
+	.content {
+		.inner {
+			padding-top: vw(120, 1520);
+			padding-bottom: vw(120, 1520);
+		}
+		&:first-child .inner {
+			padding-top: 0;
+		}
+	}
+
+
 } //1520px
 
 @include respond-to('xl') {

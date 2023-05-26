@@ -14,8 +14,8 @@
 	${require('html-loader?interpolate!../_template/common_header.html')}
 	<!-- //header(e) -->
 	<!-- container(s) -->
-	<main id="container" class="company">
-		<section>
+	<main id="container" data-gnb="company">
+		<section class="content">
 			<div class="inner">
 
 				<div class="row-cont">
@@ -76,6 +76,9 @@
 				</div>
 			</div>
 		</section>
+
+		<button type="button" id="topBtn" class="btn btn-top is-show"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
+
 	</main>
 	<!-- //container(e) -->
 	<!-- footer(s) -->

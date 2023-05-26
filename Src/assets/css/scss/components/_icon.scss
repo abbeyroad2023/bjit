@@ -22,18 +22,23 @@
 		background-image: url('../images/icon/ic-top.svg');
 	}
 
+	&-reset {
+		width: rem(22);
+		height: rem(22);
+		background-image: url('../images/icon/ic-reset.svg');
+	}
 
 	
-	&-twitter {
-		width: rem(32);
-		height: rem(28);
-		background-image: url('../images/icon/ic-twitter.png');
-	}
-	&-discord {
-		width: rem(30);
-		height: rem(34);
-		background-image: url('../images/icon/ic-discord.png');
-	}
+	// &-twitter {
+	// 	width: rem(32);
+	// 	height: rem(28);
+	// 	background-image: url('../images/icon/ic-twitter.png');
+	// }
+	// &-discord {
+	// 	width: rem(30);
+	// 	height: rem(34);
+	// 	background-image: url('../images/icon/ic-discord.png');
+	// }
 	// &-gnb-close {
 	// 	position: relative;
 	// 	width: rem(40);
@@ -55,6 +60,10 @@
 	// 		transform: rotate(-45deg);
 	// 	}
 	// }
+
+
+
+
 	&-scroll {
 		position: relative;
 		width: rem(32);

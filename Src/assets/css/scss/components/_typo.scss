@@ -171,12 +171,22 @@
 		font-size: rem(36);
 		line-height: (48/36);
 	}
+	.tit-md {
+		margin-bottom: vw(16, 375);
+		font-size: rem(30);
+	}
+	.tit-sm {
+		font-size: rem(20);
+	}
 	.txt {
 		font-size: rem(16);
 		line-height: (24/16);
 	}
+	.txt-sm {
+		font-size: rem(14);
+	}
 	.dt-txt {
-		font-size: vw(30, 375);
+		font-size: vw(20, 375);
 		line-height: (38/30);
 	}
 	.dd-txt {
@@ -187,6 +197,25 @@
 		font-size: vw(18, 375);
 		line-height: (24/18);
 	}
+	// .slogan-txt {
+	// 	font-size: vw(36, 375);
+	// }
+	.ul-list {
+		li {
+			font-size: rem(16);
+		}
+		&.bul-dot li {
+			&:before {
+				@include flex-basis(rem(4));
+				width: rem(4);
+				min-width: rem(4);
+				height: rem(4);
+				margin: rem(12) rem(12) 0 0;
+			}
+		}
+	}
+
+
 } //992px
 
 @include respond-to('md') {

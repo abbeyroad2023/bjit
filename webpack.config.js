@@ -29,6 +29,7 @@ function generateHtmlPlugins(htmlDir) {
 		'company',
 		'service',
 		'contact',
+		'guide',
 	];
 	for (i = 0; i < subList.length; i++) {
 		const htmlSubFile = fs.readdirSync(`./src/html/${subList[i]}/`).filter(file => file.substr(-5) === '.html');

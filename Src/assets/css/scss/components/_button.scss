@@ -65,22 +65,32 @@
 
 	// icon button
 	&-top {
-		position: fixed;
+		position: -webkit-sticky;
+		position: sticky;
 		left: 50%;
-		bottom: rem(40);
+		bottom: 0;
 		width: rem(90);
 		height: rem(90);
+		margin-top: rem(-20);
 		padding: 0;
 		transform: translateX(rem((1440/2)+60));
 		opacity: 0;
-		transition: opacity .3s ease-out;
+		transition: .3s ease-out;
 		z-index: 9;
 		&.is-show {
 			opacity: 1;
-			&.is-absolute {
-				position: absolute;
-				bottom: rem(277+40);
-			}
+			bottom: rem(40);
+		}
+	}
+
+	&-reset {
+		width: rem(44);
+		height: rem(44);
+		padding: 0;
+		min-width: 0;
+		margin-top: 0;
+		.ic {
+			pointer-events: none;
 		}
 	}
 }
@@ -113,13 +123,13 @@
 			margin-left: 0;
 		}
 	}
-	.btn {
-		min-width: 100%;
-		margin-top: rem(10);
-		&:first-child {
-			margin-top: 0;
-		}
-	}
+	// .btn {
+	// 	min-width: 100%;
+	// 	margin-top: rem(10);
+	// 	&:first-child {
+	// 		margin-top: 0;
+	// 	}
+	// }
 } //768px
 
 @include respond-to('sm') {

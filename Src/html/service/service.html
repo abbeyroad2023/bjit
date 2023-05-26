@@ -14,7 +14,7 @@
 	${require('html-loader?interpolate!../_template/common_header.html')}
 	<!-- //header(e) -->
 	<!-- container(s) -->
-	<main id="container" class="service">
+	<main id="container" data-gnb="service">
 		
 		<!-- visual(s) -->
 		<section class="visual service">
@@ -34,7 +34,7 @@
 		<!-- //visual(e) -->
 
 		<!-- content(s) -->
-		<section class="content">
+		<section class="content" id="service1">
 			<div class="inner">
 
 				<div class="tit-box col-half ef-init ef-fade-up">
@@ -68,7 +68,7 @@
 		<!-- //content(e) -->
 
 		<!-- content(s) -->
-		<section class="content top-line">
+		<section class="content top-line" id="service2">
 			<div class="inner">
 
 				<div class="tit-box ef-init ef-fade-up">
@@ -137,7 +137,7 @@
 		<!-- //content(e) -->
 
 		<!-- content(s) -->
-		<section class="content bg-light">
+		<section class="content bg-light" id="service3">
 			<div class="inner">
 
 				<div class="tit-box ef-init ef-fade-up">
@@ -159,7 +159,7 @@
 		<!-- //content(e) -->
 
 		<!-- content(s) -->
-		<section class="content">
+		<section class="content" id="service4">
 			<div class="inner">
 
 				<div class="tit-box col-half ef-init ef-fade-up">
@@ -178,7 +178,7 @@
 		</section>
 		<!-- //content(e) -->
 		<!-- content(s) -->
-		<section class="content top-line">
+		<section class="content top-line" id="service5">
 			<div class="inner">
 
 				<div class="tit-box col-half ef-init ef-fade-up">
@@ -193,6 +193,8 @@
 			</div>
 		</section>
 		<!-- //content(e) -->
+
+		<button type="button" id="topBtn" class="btn btn-top is-show"><i class="ic ic-top"><span class="sr-only">상단으로 이동</span></i></button>
 
 	</main>
 	<!-- //container(e) -->
